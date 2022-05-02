@@ -7,10 +7,9 @@ function CustomLink({ children, to, ...props }) {
   return (
     <div>
       <Link
-        className="px-5 font-bold flex items-center"
+        className="px-5 font-bold text-lg flex items-center hover:text-cyan-500"
         style={{
           color: match ? "#7FB5FF" : "black",
-          textDecoration: match ? "underline" : "none",
         }}
         to={to}
         {...props}
