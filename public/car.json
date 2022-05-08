@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Hyundai i20",
+    "image": "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
+    "price": "৳ 1,098,220",
+    "description": "A masterful combination of style, power, sporty handling and comfort.",
+    "supplier": "Shakib Khan",
+    "quantity": "35"
+  },
+  {
+    "name": "Hyundai Aura",
+    "image": "https://images.unsplash.com/photo-1571037697753-e796f324bbd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=855&q=80",
+    "price": "৳ 1,044,331",
+    "description": "A masterful combination of style, power, sporty handling and comfort.",
+    "supplier": "Monty Ahmed",
+    "quantity": "56"
+  },
+  {
+    "name": "Toyota Corolla",
+    "image": "https://images.unsplash.com/photo-1626072557464-90403d788e8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+    "price": "৳ 4,373,960 ",
+    "description": "A masterful combination of style, power, sporty handling and comfort.",
+    "supplier": "Sabbir Rahaman",
+    "quantity": "45"
+  },
+  {
+    "name": "Toyota C-HR",
+    "image": "https://images.unsplash.com/photo-1617469767053-d3b523a0b982?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=931&q=80",
+    "price": "৳ 2,377,900",
+    "description": "A masterful combination of style, power, sporty handling and comfort.",
+    "supplier": "Papon Hasan",
+    "quantity": "63"
+  },
+  {
+    "name": "Tesla Model S",
+    "image": "https://images.unsplash.com/photo-1561580125-028ee3bd62eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    "price": "৳ 8,279,100",
+    "description": "A masterful combination of style, power, sporty handling and comfort.",
+    "supplier": "Rahim Khan",
+    "quantity": "53"
+  },
+  {
+    "name": "Tesla Model 3",
+    "image": "https://images.unsplash.com/photo-1576221162298-3d9f04e9f661?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    "price": "৳ 4,619,160",
+    "description": "A masterful combination of style, power, sporty handling and comfort.",
+    "supplier": "Monir Khan",
+    "quantity": "85"
+  },
+  {
+    "name": "Audi Q7",
+    "image": "https://images.unsplash.com/photo-1623659248894-1a0272243054?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=905&q=80",
+    "price": "৳ 5,340,600",
+    "description": "A masterful combination of style, power, sporty handling and comfort.",
+    "supplier": "Hamid Mahamud",
+    "quantity": "60"
+  },
+  {
+    "name": "Audi e-tron",
+    "image": "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+    "price": "৳ 6,450,000",
+    "description": "A masterful combination of style, power, sporty handling and comfort.",
+    "supplier": "Juwel Khan",
+    "quantity": "32"
+  },
+  {
+    "name": "Ford Endeavour",
+    "image": "https://images.unsplash.com/photo-1551830820-330a71b99659?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    "price": "৳4,494,000",
+    "description": "A masterful combination of style, power, sporty handling and comfort.",
+    "supplier": "Musfik Rahaman",
+    "quantity": "45"
+  }
+]

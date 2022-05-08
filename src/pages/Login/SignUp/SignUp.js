@@ -36,6 +36,7 @@ const SignUp = () => {
   const handelUserSubmit = async (e) => {
     e.preventDefault();
     if (password !== confirm) {
+      toast("password don't match");
       return;
     }
 
