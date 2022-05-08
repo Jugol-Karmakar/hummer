@@ -13,6 +13,7 @@ const Header = () => {
       <nav className="flex justify-center p-4">
         <CustomLink to="/">Home</CustomLink>
         <CustomLink to="/inventory">Inventory</CustomLink>
+        <CustomLink to="/blog">Blogs</CustomLink>
         <CustomLink to="/signin">
           <FaUserPlus className="mr-2 text-xl" />
           SignIn
