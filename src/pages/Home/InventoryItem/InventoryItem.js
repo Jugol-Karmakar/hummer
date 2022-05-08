@@ -1,8 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const InventoryItem = (props) => {
-  const { name, image, price, description, supplier, quantity } =
+  const { _id, name, image, price, description, supplier, quantity } =
     props.inventory;
+
+  const navigate = useNavigate();
+
+  const navigateInventoryUpdate = (id) => {
+    navigate(`/inventory/${id}`);
+  };
+
   return (
     <div className="bg-white shadow-md hover:shadow-xl  rounded-md overflow-hidden">
       <div className="w-full h-72">
@@ -26,7 +34,10 @@ const InventoryItem = (props) => {
         </div>
       </div>
       <div className="flex justify-center">
-        <button className="bg-cyan-500 w-full py-2 font-bold hover:bg-green-500">
+        <button
+          onClick={() => navigateInventoryUpdate(_id)}
+          className="bg-cyan-500 hover:bg-cyan-600 w-full py-2 font-bold"
+        >
           Update
         </button>
       </div>
