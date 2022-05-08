@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import SocialMedia from "../SocialMedia/SocialMedia";
@@ -13,6 +16,7 @@ const SignIn = () => {
 
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -35,6 +39,11 @@ const SignIn = () => {
     e.preventDefault();
     signInWithEmailAndPassword(email, password);
     toast("Log In Successfully !!");
+  };
+
+  const resetPassword = async () => {
+    await sendPasswordResetEmail(email);
+    toast("Sent email and set your password");
   };
 
   return (
@@ -84,8 +93,9 @@ const SignIn = () => {
           <p className="py-2">
             {" "}
             <Link
+              onClick={resetPassword}
               className="text-cyan-500 flex justify-end font-bold"
-              to="/login"
+              to="/signin"
             >
               Forget Password?
             </Link>

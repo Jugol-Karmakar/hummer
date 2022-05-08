@@ -5,8 +5,15 @@ import auth from "../../../firebase.init";
 
 const Requireauth = ({ children }) => {
   const [user, loading] = useAuthState(auth);
-
   const location = useLocation();
+
+  if (loading) {
+    return (
+      <div className="text-center h-96">
+        <p className="text-xl  text-center">Loading....</p>
+      </div>
+    );
+  }
 
   if (!user) {
     return (

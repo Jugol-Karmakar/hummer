@@ -1,24 +1,34 @@
-import React, { useEffect, useState } from "react";
-import Car from "../Car/Car";
+import React from "react";
 
-const InventoryItem = () => {
-  const [cars, setCar] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:5000/cars")
-      .then((res) => res.json())
-      .then((data) => setCar(data));
-  }, []);
-
+const InventoryItem = (props) => {
+  const { name, image, price, description, supplier, quantity } =
+    props.inventory;
   return (
-    <div>
-      <div className="mt-20 flex justify-center">
-        <h2 className="text-4xl font-bold my-5">Inventory Items</h2>
+    <div className="bg-white shadow-md hover:shadow-xl  rounded-md overflow-hidden">
+      <div className="w-full h-72">
+        <img className="w-full h-full object-cover" src={image} alt="" />
       </div>
-      <div className="container mx-auto px-10 my-10 grid grid-cols-3 gap-6">
-        {cars.map((car) => (
-          <Car key={car.id} car={car}></Car>
-        ))}
+      <div className="p-5">
+        <h3 className="text-2xl font-bold mb-2">{name}</h3>
+        <p className="text-xl text-green-600 font-bold mb-2">
+          {price} <sub>/MRP</sub>
+        </p>
+        <p className="text-base text-neutral-500 my-2">{description}</p>
+        <div className="flex justify-between my-2">
+          <p className="text-base font-semibold mr-1 ">
+            Available :{" "}
+            <span className="text-green-500 font-bold">{quantity}</span>
+          </p>
+          <p className="font-semibold text-base ">
+            Supplier :{" "}
+            <span className="text-green-500 font-bold">{supplier}</span>
+          </p>
+        </div>
+      </div>
+      <div className="flex justify-center">
+        <button className="bg-cyan-500 w-full py-2 font-bold hover:bg-green-500">
+          Update
+        </button>
       </div>
     </div>
   );

@@ -19,9 +19,6 @@ const SignUp = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
-  const [sendEmailVerification, sending, error1] =
-    useSendEmailVerification(auth);
-
   const handelEmailBlur = (e) => {
     setEmail(e.target.value);
   };
@@ -52,7 +49,7 @@ const SignUp = () => {
     <div className="min-h-screen ">
       <div className="container  mx-auto w-1/3 border px-8 mt-5 mb-8 rounded-md shadow-lg">
         <h2 className="text-3xl text-center text-cyan-500 font-semibold my-4">
-          Register PLease!!
+          Register Please!!
         </h2>
         <SocialMedia></SocialMedia>
         <form onSubmit={handelUserSubmit}>

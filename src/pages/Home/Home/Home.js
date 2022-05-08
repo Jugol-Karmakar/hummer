@@ -1,12 +1,12 @@
 import React from "react";
 import Hero from "../Hero/Hero";
-import InventoryItem from "../InventoryItem/InventoryItem";
+import Inventory from "../Inventory/Inventory";
 
 const Home = () => {
   return (
     <div className="min-h-full">
       <Hero></Hero>
-      <InventoryItem></InventoryItem>
+      <Inventory isHome></Inventory>
     </div>
   );
 };

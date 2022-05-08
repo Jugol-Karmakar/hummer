@@ -3,7 +3,7 @@ import heroImage from "../../../images/hero-img.png";
 
 const Hero = () => {
   return (
-    <div className="container mx-auto flex items-center px-10 my-10 ">
+    <div className="container mx-auto flex items-center px-10 my-10">
       <div className="lg:text-left lg:w-1/2">
         <h2 className="text-5xl font-extrabold drop-shadow my-3">
           <span className="text-5xl font-extrabold drop-shadow text-red-700">
