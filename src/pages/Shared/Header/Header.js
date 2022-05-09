@@ -22,9 +22,7 @@ const Header = () => {
       <nav className="flex justify-center items-center p-4">
         <CustomLink to="/">Home</CustomLink>
         <CustomLink to="/inventory">Inventory</CustomLink>
-        {user && (
-          <CustomLink to="/manageinventory">Manage Inventory</CustomLink>
-        )}
+        {user && <CustomLink to="/manageinventory">Manage Item</CustomLink>}
         {user && <CustomLink to="/additem">Add Item</CustomLink>}
         {user && <CustomLink to="/myitem">My Item</CustomLink>}
 

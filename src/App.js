@@ -4,6 +4,7 @@ import Blog from "./pages/Blog/Blog";
 import Home from "./pages/Home/Home/Home";
 import Inventory from "./pages/Home/Inventory/Inventory";
 import InventoryUpdate from "./pages/InventoryUpdate/InventoryUpdate";
+import Requireauth from "./pages/Login/Requireauth/Requireauth";
 import SignIn from "./pages/Login/SignIn/SignIn";
 import SignUp from "./pages/Login/SignUp/SignUp";
 import NotFound from "./pages/NotFound/NotFound";
@@ -21,7 +22,11 @@ function App() {
         <Route path="/inventory" element={<Inventory></Inventory>}></Route>
         <Route
           path="/inventory/:id"
-          element={<InventoryUpdate></InventoryUpdate>}
+          element={
+            <Requireauth>
+              <InventoryUpdate></InventoryUpdate>
+            </Requireauth>
+          }
         ></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
