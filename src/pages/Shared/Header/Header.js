@@ -5,12 +5,15 @@ import logoImage from "../../../images/logo.png";
 import auth from "../../../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Header = () => {
   const [user, loading, error] = useAuthState(auth);
 
   const handelSignOut = () => {
     signOut(auth);
+    toast("Log Out Successfull!!");
   };
 
   return (
@@ -19,6 +22,7 @@ const Header = () => {
         <img className="h-8 w-full mx-2 object-cover" src={logoImage} alt="" />
         <h2 className="text-3xl font-black text-red-700">HUMMER</h2>
       </div>
+      <ToastContainer></ToastContainer>
       <nav className="flex justify-center items-center p-4">
         <CustomLink to="/">Home</CustomLink>
         <CustomLink to="/inventory">Inventory</CustomLink>

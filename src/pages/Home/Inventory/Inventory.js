@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useInventory from "../../../Hooks/useInventory";
 import InventoryItem from "../InventoryItem/InventoryItem";
-import Car from "../InventoryItem/InventoryItem";
 
 const Inventory = (props) => {
   const { isHome } = props;

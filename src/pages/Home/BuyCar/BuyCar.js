@@ -31,7 +31,7 @@ const BuyCar = () => {
         <div className="p-5 border-r-2">
           <div className="flex items-center py-4">
             <FaStepForward className="text-red-700 mr-2"></FaStepForward>
-            <h4 className="text-xl font-bold text-red-700">Step 1</h4>
+            <h4 className="text-xl font-bold text-red-700">Step 2</h4>
           </div>
           <div className="pb-4">
             <CallIcon classname="w-20"></CallIcon>
@@ -39,15 +39,15 @@ const BuyCar = () => {
           <div className="text-center">
             <h3 className="text-lg font-bold my-4">Contact Seller</h3>
             <p className="text-base text-neutral-600">
-              We have compiled recommended information that you want to know to
-              buy your car.
+              After you've selected a car, we arrange a viewing to seller
+              location or one of our points.
             </p>
           </div>
         </div>
         <div className="p-5 border-r-2">
           <div className="flex items-center py-4">
             <FaStepForward className="text-red-700 mr-2"></FaStepForward>
-            <h4 className="text-xl font-bold text-red-700">Step 1</h4>
+            <h4 className="text-xl font-bold text-red-700">Step 3</h4>
           </div>
           <div className="pb-4">
             <MoneyIcon classname="w-20"></MoneyIcon>
@@ -55,15 +55,15 @@ const BuyCar = () => {
           <div className="text-center">
             <h3 className="text-lg font-bold my-4">Financing & Registration</h3>
             <p className="text-base text-neutral-600">
-              We have compiled recommended information that you want to know to
-              buy your car.
+              We deal with the paper work to avail your financing and
+              registration in 24 hours
             </p>
           </div>
         </div>
         <div className="p-5 ">
           <div className="flex items-center py-4">
             <FaStepForward className="text-red-700 mr-2"></FaStepForward>
-            <h4 className="text-xl font-bold text-red-700">Step 1</h4>
+            <h4 className="text-xl font-bold text-red-700">Step 4</h4>
           </div>
           <div className="pb-4">
             <GetIcon classname="w-20"></GetIcon>
@@ -71,8 +71,7 @@ const BuyCar = () => {
           <div className="text-center">
             <h3 className="text-lg font-bold my-4">Get Your Car</h3>
             <p className="text-base text-neutral-600">
-              We have compiled recommended information that you want to know to
-              buy your car.
+              Embrace the joy of Car Ownership without any of the hassle!
             </p>
           </div>
         </div>

@@ -1,16 +1,29 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { FaTrashAlt } from "react-icons/fa";
+import useInventory from "../../../Hooks/useInventory";
 
-const InventoryItem = (props) => {
+const ManageInventoryItem = (props) => {
   const { _id, name, image, price, description, supplier, quantity } =
-    props.inventory;
+    props.manageItems;
 
-  const navigate = useNavigate();
+  const [inventory, setInvetory] = useInventory();
 
-  const navigateInventoryUpdate = (id) => {
-    navigate(`/inventory/${id}`);
+  const handelDeleteItem = (id) => {
+    const sure = window.confirm("Are you sure want to delete?");
+    if (sure) {
+      const url = `https://lit-dusk-79362.herokuapp.com/inventory/${_id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deleteCount > 0) {
+            const item = inventory.filter((inven) => inven._id !== id);
+            setInvetory(item);
+          }
+        });
+    }
   };
-
   return (
     <div className="bg-white shadow-xl rounded-md overflow-hidden">
       <div className="w-full h-72">
@@ -35,14 +48,15 @@ const InventoryItem = (props) => {
       </div>
       <div className="flex justify-center">
         <button
-          onClick={() => navigateInventoryUpdate(_id)}
-          className="w-full text-white bg-red-700 hover:bg-red-600  py-2 font-bold"
+          onClick={handelDeleteItem}
+          className="w-full flex justify-center items-center text-white bg-red-700 hover:bg-red-600  py-2 font-semibold"
         >
-          Update
+          <FaTrashAlt className="text-xl mx-2"></FaTrashAlt>
+          Delete
         </button>
       </div>
     </div>
   );
 };
 
-export default InventoryItem;
+export default ManageInventoryItem;
