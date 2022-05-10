@@ -30,7 +30,7 @@ const AddItem = () => {
 
   return (
     <div className="min-h-screen container my-10">
-      <h2>this ADD ITEM</h2>
+      <h2 className="text-3xl text-center py-4">Add Inventory Item</h2>
       <div className="max-w-lg mx-auto bg-cyan-500 p-10 rounded">
         <form onSubmit={handelAddInventory} className="flex flex-col">
           <input
@@ -73,7 +73,7 @@ const AddItem = () => {
             rows="10"
           ></textarea>
           <input
-            className="bg-red-700 font-semibold text-white cursor-pointer  py-3"
+            className="bg-[#c70909] hover:bg-[#b90a0a] rounded  font-semibold text-white cursor-pointer  py-3"
             type="submit"
             value="Add Inventory"
           />

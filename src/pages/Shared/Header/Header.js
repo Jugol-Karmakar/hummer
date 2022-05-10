@@ -20,23 +20,22 @@ const Header = () => {
     <div className="flex items-center justify-between px-10 py-2 bg-white sticky top-0 z-50">
       <div className="flex items-center cursor-pointer">
         <img className="h-8 w-full mx-2 object-cover" src={logoImage} alt="" />
-        <h2 className="text-3xl font-black text-red-700">HUMMER</h2>
+        <h2 className="text-3xl font-black text-[#c70909]">HUMMER</h2>
       </div>
       <ToastContainer></ToastContainer>
       <nav className="flex justify-center items-center p-4">
         <CustomLink to="/">Home</CustomLink>
         <CustomLink to="/inventory">Inventory</CustomLink>
-        {user && <CustomLink to="/manageinventory">Manage Item</CustomLink>}
         {user && <CustomLink to="/additem">Add Item</CustomLink>}
         {user && <CustomLink to="/myitem">My Item</CustomLink>}
 
         <CustomLink to="/blog">Blogs</CustomLink>
         {user ? (
           <button
-            className="bg-red-700 px-4 py-2 font-bold text-lg text-white rounded-full"
+            className="bg-[#c70909] hover:bg-[#b90909] px-4 py-2 font-bold text-lg text-white  rounded-full"
             onClick={handelSignOut}
           >
-            signOut
+            sign out
           </button>
         ) : (
           <div className="flex">

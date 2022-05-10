@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="container mx-auto flex items-center px-10 my-10">
       <div className="lg:text-left lg:w-1/2">
         <h2 className="text-5xl font-extrabold drop-shadow my-3">
-          <span className="text-5xl font-extrabold drop-shadow text-red-700">
+          <span className="text-5xl font-extrabold drop-shadow text-[#c70909]">
             POWER &
           </span>{" "}
           BEAUTY
@@ -15,7 +15,8 @@ const Hero = () => {
           Free Library's $1M auto archives are moving to Philly's world-famous
           car museum and to a Hershey attraction
         </p>
-        <button className="border my-3 px-5 py-2 font-bold bg-red-700 text-white hover:bg-black hover:text-white">
+
+        <button className="border my-3 px-8 py-3 rounded font-bold bg-[#c70909] text-white hover:bg-white hover:text-[#a70808] hover:border-[#c70909]">
           Learn More
         </button>
       </div>

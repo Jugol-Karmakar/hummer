@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import useInventory from "../../../Hooks/useInventory";
 import InventoryItem from "../InventoryItem/InventoryItem";
 
@@ -21,6 +22,7 @@ const Inventory = (props) => {
               .slice(0, 6)
               .map((inventory) => (
                 <InventoryItem
+                  isHome={isHome}
                   key={inventory._id}
                   inventory={inventory}
                 ></InventoryItem>
@@ -32,6 +34,15 @@ const Inventory = (props) => {
               ></InventoryItem>
             ))}
       </div>
+      {!isHome && (
+        <div className="flex justify-center pb-16">
+          <Link to="/additem">
+            <button className="bg-[#c70909] hover:bg-[#C70909] rounded text-white font-semibold px-8 py-3 text-lg">
+              Add Item
+            </button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

@@ -37,6 +37,7 @@ const SignIn = () => {
 
   const handelLoginSubmit = (e) => {
     e.preventDefault();
+
     signInWithEmailAndPassword(email, password);
     toast("Log In Successfully !!");
   };
@@ -103,6 +104,7 @@ const SignIn = () => {
 
           <div className="text-center">
             <input
+              onClick={() => signInWithEmailAndPassword()}
               className="bg-cyan-500 text-white text-lg font-semibold px-12 py-2 rounded-full mt-4 cursor-pointer"
               type="submit"
               value="Login"

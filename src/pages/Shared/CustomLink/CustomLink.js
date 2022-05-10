@@ -9,7 +9,7 @@ function CustomLink({ children, to, ...props }) {
       <Link
         className="px-5 font-bold text-lg flex items-center "
         style={{
-          color: match ? "#B20600" : "black",
+          color: match ? "#c70909" : "black",
         }}
         to={to}
         {...props}
