@@ -60,7 +60,7 @@ const InventoryItem = (props) => {
           className={
             isHome
               ? "w-full px-8 text-white bg-[#c70909] hover:bg-[#C70909]  py-2 font-bold"
-              : " px-8 text-white bg-[#c70909] hover:bg-[#C70909]  py-2 font-bold"
+              : "w-full px-8 mr-1 text-white bg-[#c70909] hover:bg-[#C70909]  py-2 font-bold"
           }
         >
           Update
@@ -68,7 +68,7 @@ const InventoryItem = (props) => {
         {!isHome && (
           <button
             onClick={() => handelDeleteItem(inventory._id)}
-            className="px-8 text-white bg-[#c70909] hover:bg-[#C70909]  py-2 font-bold"
+            className="w-full ml-1 px-8 text-white bg-[#c70909] hover:bg-[#C70909]  py-2 font-bold"
           >
             Delete
           </button>

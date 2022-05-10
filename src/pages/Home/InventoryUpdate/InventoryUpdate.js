@@ -31,10 +31,28 @@ const InventoryUpdate = () => {
       });
   };
 
+  const handelDelever = () => {
+    const quantity = updateInventory?.quantity;
+    const newQuantity = parseInt(quantity) - 1;
+    const updateQuantity = { quantity: newQuantity };
+
+    const url = `https://lit-dusk-79362.herokuapp.com/inventory/${id}`;
+    fetch(url, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updateQuantity),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        alert("Delevered Item");
+      });
+  };
+
   return (
     <div className="container mx-auto px-10 min-h-screen mt-10">
       <div className="flex  max-w-2xl mx-auto my-5">
-        <div className="w-full h-80">
+        <div className="w-full h-96">
           <img
             className="w-full h-full object-cover"
             src={updateInventory.image}
@@ -72,17 +90,25 @@ const InventoryUpdate = () => {
               <div>
                 <input
                   onChange={(e) => setReStock(e.target.value)}
-                  className=" py-2 px-4 outline-none border rounded border-red-700"
+                  className="w-full  py-2 px-4 outline-none border rounded border-red-700"
                   type="number"
                   min={0}
                   name="quantity"
                   placeholder="quantity"
                 />
-                <button onClick={() => handleStock()}>Update Quantity</button>
+                <button
+                  className="w-full my-3 bg-[#c70909] text-white font-bold rounded py-2 "
+                  onClick={() => handleStock()}
+                >
+                  Update Quantity
+                </button>
               </div>
 
               <div className="mt-3">
-                <button className="w-full bg-green-500 rounded text-black  font-bold py-2 px-5">
+                <button
+                  onClick={() => handelDelever()}
+                  className="w-full bg-green-500 rounded text-black  font-bold py-2 px-5"
+                >
                   Delevered
                 </button>
               </div>

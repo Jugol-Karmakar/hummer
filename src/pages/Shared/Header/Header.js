@@ -26,7 +26,8 @@ const Header = () => {
       <nav className="">
         <div className="hidden lg:flex lg:justify-center lg:items-center p-4">
           <CustomLink to="/">Home</CustomLink>
-          <CustomLink to="/inventory">Manage Items</CustomLink>
+          <CustomLink to="/inventory">Inventory</CustomLink>
+          {user && <CustomLink to="/manageinventory">Manage Items</CustomLink>}
           {user && <CustomLink to="/additem">Add Items</CustomLink>}
           {user && <CustomLink to="/myitem">My Items</CustomLink>}
 

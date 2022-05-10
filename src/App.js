@@ -9,8 +9,7 @@ import SignIn from "./pages/Login/SignIn/SignIn";
 import SignUp from "./pages/Login/SignUp/SignUp";
 import AddItem from "./pages/ManageItems/AddItem/AddItem";
 import ManageInventory from "./pages/ManageItems/ManageInevntory/ManageInventory";
-import MyItem from "./pages/ManageItems/MyItem/MyItem";
-
+import MyItems from "./pages/ManageItems/MyItems/MyItems";
 import NotFound from "./pages/NotFound/NotFound";
 import Footer from "./pages/Shared/Footer/Footer";
 import Header from "./pages/Shared/Header/Header";
@@ -39,9 +38,12 @@ function App() {
             </Requireauth>
           }
         ></Route>
-
+        <Route
+          path="manageinventory"
+          element={<ManageInventory></ManageInventory>}
+        ></Route>
         <Route path="additem" element={<AddItem></AddItem>}></Route>
-        <Route path="myitem" element={<MyItem></MyItem>}></Route>
+        <Route path="myitem" element={<MyItems></MyItems>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>

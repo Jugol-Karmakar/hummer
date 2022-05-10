@@ -39,7 +39,6 @@ const SignIn = () => {
     e.preventDefault();
 
     signInWithEmailAndPassword(email, password);
-    toast("Log In Successfully !!");
   };
 
   const resetPassword = async () => {

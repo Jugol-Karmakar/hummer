@@ -1,8 +1,13 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import auth from "../../../firebase.init";
 
 const AddItem = () => {
+  const [user, loading, error] = useAuthState(auth);
+  console.log(user);
+
   const handelAddInventory = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -11,8 +16,17 @@ const AddItem = () => {
     const description = e.target.description.value;
     const quantity = e.target.quantity.value;
     const supplier = e.target.supplier.value;
+    const email = user?.email;
 
-    const inventory = { name, image, price, description, quantity, supplier };
+    const inventory = {
+      name,
+      image,
+      price,
+      description,
+      quantity,
+      supplier,
+      email,
+    };
 
     fetch("https://lit-dusk-79362.herokuapp.com/inventory", {
       method: "POST",
