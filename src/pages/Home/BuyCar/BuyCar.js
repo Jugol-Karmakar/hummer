@@ -13,7 +13,7 @@ const BuyCar = () => {
           How to buy your car with Hummer?
         </h2>
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 lg:shadow-xl shadow-2xl py-6 rounded bg-white">
-          <div className="p-5 lg:border-r-2 lg:border-b-2 border-b-2">
+          <div className="p-5 lg:border-r-2 lg:border-b-0 border-b-2">
             <div className="flex items-center lg:justify-start justify-center py-4">
               <FaStepForward className="text-red-700 mr-2"></FaStepForward>
               <h4 className="text-xl font-bold text-red-700">Step 1</h4>
@@ -29,7 +29,7 @@ const BuyCar = () => {
               </p>
             </div>
           </div>
-          <div className="p-5 lg:border-r-2 lg:border-b-2 border-b-2">
+          <div className="p-5 lg:border-r-2 lg:border-b-0 border-b-2">
             <div className="flex items-center lg:justify-start justify-center py-4">
               <FaStepForward className="text-red-700 mr-2"></FaStepForward>
               <h4 className="text-xl font-bold text-red-700">Step 2</h4>
@@ -45,7 +45,7 @@ const BuyCar = () => {
               </p>
             </div>
           </div>
-          <div className="p-5 lg:border-r-2 lg:border-b-2 border-b-2">
+          <div className="p-5 lg:border-r-2 lg:border-b-0 border-b-2">
             <div className="flex items-center lg:justify-start justify-center py-4">
               <FaStepForward className="text-red-700 mr-2"></FaStepForward>
               <h4 className="text-xl font-bold text-red-700">Step 3</h4>

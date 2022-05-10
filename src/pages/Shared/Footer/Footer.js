@@ -15,7 +15,7 @@ const Footer = () => {
   const year = today.getFullYear();
   return (
     <div className="w-full bg-white">
-      <div className="container mx-auto flex flex-col lg:flex-row justify-around px-20 pt-20">
+      <div className="container mx-auto flex flex-row justify-around lg:px-20 px-10 pt-20">
         <div className="lg:w-1/2">
           <div className="flex items-cente py-3">
             <img className="h-6 mx-3" src={logoImage} alt="" />
@@ -30,10 +30,10 @@ const Footer = () => {
             got the right domain name or company.
           </p>
         </div>
-        <div>
+        <div className="">
           <h3 className="text-xl font-bold">Contact</h3>
           <div className="flex items-center my-2">
-            <MdLocationPin className="text-lg mx-2 text-[#c70909]"></MdLocationPin>
+            <MdLocationPin className="text-xl mx-2 text-[#c70909]"></MdLocationPin>
             <p className="text-lg  font-semibold">23/4 Shibbari mor,Khulna</p>
           </div>
           <div className="flex items-center my-2">
