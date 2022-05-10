@@ -90,7 +90,7 @@ const SignIn = () => {
               required
             />
           </div>
-
+          <p>{error?.message ? error?.message : ""}</p>
           <p className="py-2">
             {" "}
             <Link

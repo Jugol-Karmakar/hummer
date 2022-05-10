@@ -11,12 +11,14 @@ const Inventory = (props) => {
     <div>
       <div
         className={
-          isHome ? "mt-20 flex justify-center" : "mt-10 flex justify-center"
+          isHome ? "mt-20 flex justify-center" : "mt-6 flex justify-center"
         }
       >
-        <h2 className="text-4xl font-bold my-5">Inventory Items</h2>
+        <h2 className="text-4xl font-black text-[#c70909] my-2">
+          Inventory Items
+        </h2>
       </div>
-      <div className="container mx-auto px-10 my-10 grid grid-cols-3 gap-8">
+      <div className="container mx-auto px-10 my-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {isHome
           ? inventory
               .slice(0, 6)

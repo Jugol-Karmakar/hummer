@@ -23,32 +23,34 @@ const Header = () => {
         <h2 className="text-3xl font-black text-[#c70909]">HUMMER</h2>
       </div>
       <ToastContainer></ToastContainer>
-      <nav className="flex justify-center items-center p-4">
-        <CustomLink to="/">Home</CustomLink>
-        <CustomLink to="/inventory">Inventory</CustomLink>
-        {user && <CustomLink to="/additem">Add Item</CustomLink>}
-        {user && <CustomLink to="/myitem">My Item</CustomLink>}
+      <nav className="">
+        <div className="hidden lg:flex lg:justify-center lg:items-center p-4">
+          <CustomLink to="/">Home</CustomLink>
+          <CustomLink to="/inventory">Manage Items</CustomLink>
+          {user && <CustomLink to="/additem">Add Items</CustomLink>}
+          {user && <CustomLink to="/myitem">My Items</CustomLink>}
 
-        <CustomLink to="/blog">Blogs</CustomLink>
-        {user ? (
-          <button
-            className="bg-[#c70909] hover:bg-[#b90909] px-4 py-2 font-bold text-lg text-white  rounded-full"
-            onClick={handelSignOut}
-          >
-            sign out
-          </button>
-        ) : (
-          <div className="flex">
-            <CustomLink to="/signin">
-              <FaUserPlus className="mr-2 text-xl" />
-              SignIn
-            </CustomLink>
-            <CustomLink to="/signup">
-              <FaSignInAlt className="mr-2 text-xl" />
-              SignUp
-            </CustomLink>
-          </div>
-        )}
+          <CustomLink to="/blog">Blogs</CustomLink>
+          {user ? (
+            <button
+              className="bg-[#c70909] hover:bg-[#b90909] px-4 py-2 font-bold text-lg text-white  rounded-full"
+              onClick={handelSignOut}
+            >
+              sign out
+            </button>
+          ) : (
+            <div className="flex">
+              <CustomLink to="/signin">
+                <FaUserPlus className="mr-2 text-xl" />
+                SignIn
+              </CustomLink>
+              <CustomLink to="/signup">
+                <FaSignInAlt className="mr-2 text-xl" />
+                SignUp
+              </CustomLink>
+            </div>
+          )}
+        </div>
       </nav>
     </div>
   );

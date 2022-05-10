@@ -3,8 +3,8 @@ import heroImage from "../../../images/hero-img.png";
 
 const Hero = () => {
   return (
-    <div className="container mx-auto flex items-center px-10 my-10">
-      <div className="lg:text-left lg:w-1/2">
+    <div className="container mx-auto flex flex-col justify-center lg:flex-row items-center px-10 my-10">
+      <div className="lg:text-left text-center lg:w-1/2">
         <h2 className="text-5xl font-extrabold drop-shadow my-3">
           <span className="text-5xl font-extrabold drop-shadow text-[#c70909]">
             POWER &
@@ -20,7 +20,7 @@ const Hero = () => {
           Learn More
         </button>
       </div>
-      <div className="lg:w-1/2 flex justify-center">
+      <div className="lg:w-1/2 w-full flex justify-center">
         <img
           className="h-full max-w-[550px] object-contain"
           src={heroImage}

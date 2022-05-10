@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 
 const InventoryUpdate = () => {
   const { id } = useParams();
+  const [reStock, setReStock] = useState(0);
+
   const [updateInventory, setUpdateInventory] = useState({});
   useEffect(() => {
     const url = `https://lit-dusk-79362.herokuapp.com/inventory/${id}`;
@@ -10,6 +12,25 @@ const InventoryUpdate = () => {
       .then((res) => res.json())
       .then((data) => setUpdateInventory(data));
   }, []);
+
+  const handleStock = () => {
+    const quantity = updateInventory?.quantity;
+    const newQuantity = parseInt(reStock) + parseInt(quantity);
+    const updateQuantity = { quantity: newQuantity };
+
+    const url = `https://lit-dusk-79362.herokuapp.com/inventory/${id}`;
+    fetch(url, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updateQuantity),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        alert("Item Updated");
+      });
+  };
+
   return (
     <div className="container mx-auto px-10 min-h-screen mt-10">
       <div className="flex  max-w-2xl mx-auto my-5">
@@ -33,7 +54,7 @@ const InventoryUpdate = () => {
               Price : ৳{updateInventory.price} <sub>/MRP</sub>
             </p>
 
-            <div className="flex justify-between my-3">
+            <div className=" flex justify-between my-3">
               <p className="text-base font-semibold mr-1 ">
                 Available :{" "}
                 <span className="text-[#c70909] text-lg font-bold">
@@ -47,17 +68,24 @@ const InventoryUpdate = () => {
                 </span>
               </p>
             </div>
-            <div className="flex flex-col">
-              <input
-                className="py-2 px-4 outline-none border rounded border-red-700"
-                type="text"
-                placeholder="quantity"
-              />
-              <input
-                className="hover:bg-[#c70909] border border-[#c70909] rounded text-black hover:text-white mt-4 font-bold py-3"
-                type="submit"
-                value="Update Quantity"
-              />
+            <div className="mt-5">
+              <div>
+                <input
+                  onChange={(e) => setReStock(e.target.value)}
+                  className=" py-2 px-4 outline-none border rounded border-red-700"
+                  type="number"
+                  min={0}
+                  name="quantity"
+                  placeholder="quantity"
+                />
+                <button onClick={() => handleStock()}>Update Quantity</button>
+              </div>
+
+              <div className="mt-3">
+                <button className="w-full bg-green-500 rounded text-black  font-bold py-2 px-5">
+                  Delevered
+                </button>
+              </div>
             </div>
           </div>
         </div>

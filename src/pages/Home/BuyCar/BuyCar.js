@@ -8,17 +8,17 @@ import SelectIcon from "../../../components/svg/Select";
 const BuyCar = () => {
   return (
     <section className="w-full bg-white">
-      <div className="container mx-auto px-10 py-8 ">
+      <div className="container mx-auto px-10 py-14">
         <h2 className="text-3xl font-bold py-4 mb-4">
           How to buy your car with Hummer?
         </h2>
-        <div className="grid grid-cols-4 gap-6 shadow-xl py-6 rounded bg-white">
-          <div className="p-5 border-r-2">
-            <div className="flex items-center py-4">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 lg:shadow-xl shadow-2xl py-6 rounded bg-white">
+          <div className="p-5 lg:border-r-2 lg:border-b-2 border-b-2">
+            <div className="flex items-center lg:justify-start justify-center py-4">
               <FaStepForward className="text-red-700 mr-2"></FaStepForward>
               <h4 className="text-xl font-bold text-red-700">Step 1</h4>
             </div>
-            <div className="pb-4">
+            <div className="pb-4 flex lg:justify-start justify-center">
               <SelectIcon classname="w-20"></SelectIcon>
             </div>
             <div className="text-center">
@@ -29,12 +29,12 @@ const BuyCar = () => {
               </p>
             </div>
           </div>
-          <div className="p-5 border-r-2">
-            <div className="flex items-center py-4">
+          <div className="p-5 lg:border-r-2 lg:border-b-2 border-b-2">
+            <div className="flex items-center lg:justify-start justify-center py-4">
               <FaStepForward className="text-red-700 mr-2"></FaStepForward>
               <h4 className="text-xl font-bold text-red-700">Step 2</h4>
             </div>
-            <div className="pb-4">
+            <div className="pb-4 flex lg:justify-start justify-center">
               <CallIcon classname="w-20"></CallIcon>
             </div>
             <div className="text-center">
@@ -45,12 +45,12 @@ const BuyCar = () => {
               </p>
             </div>
           </div>
-          <div className="p-5 border-r-2">
-            <div className="flex items-center py-4">
+          <div className="p-5 lg:border-r-2 lg:border-b-2 border-b-2">
+            <div className="flex items-center lg:justify-start justify-center py-4">
               <FaStepForward className="text-red-700 mr-2"></FaStepForward>
               <h4 className="text-xl font-bold text-red-700">Step 3</h4>
             </div>
-            <div className="pb-4">
+            <div className="pb-4 flex lg:justify-start justify-center">
               <MoneyIcon classname="w-20"></MoneyIcon>
             </div>
             <div className="text-center">
@@ -64,11 +64,11 @@ const BuyCar = () => {
             </div>
           </div>
           <div className="p-5 ">
-            <div className="flex items-center py-4">
+            <div className="flex items-center lg:justify-start justify-center py-4">
               <FaStepForward className="text-red-700 mr-2"></FaStepForward>
               <h4 className="text-xl font-bold text-red-700">Step 4</h4>
             </div>
-            <div className="pb-4">
+            <div className="pb-4 flex lg:justify-start justify-center">
               <GetIcon classname="w-20"></GetIcon>
             </div>
             <div className="text-center">

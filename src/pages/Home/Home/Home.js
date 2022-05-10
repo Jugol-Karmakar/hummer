@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BuyCar from "../BuyCar/BuyCar";
+import Contact from "../Contact/Contact";
 import Hero from "../Hero/Hero";
 import Inventory from "../Inventory/Inventory";
 
@@ -17,6 +18,7 @@ const Home = () => {
         </Link>
       </div>
       <BuyCar></BuyCar>
+      <Contact></Contact>
     </div>
   );
 };
