@@ -9,6 +9,7 @@ import SocialMedia from "../SocialMedia/SocialMedia";
 import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -32,13 +33,20 @@ const SignIn = () => {
   };
 
   if (user) {
-    navigate(from, { replace: true });
   }
 
-  const handelLoginSubmit = (e) => {
+  const handelLoginSubmit = async (e) => {
     e.preventDefault();
 
-    signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(email, password);
+    const { data } = await axios.post(
+      "https://lit-dusk-79362.herokuapp.com/login",
+      {
+        email,
+      }
+    );
+    localStorage.setItem("accessToken", data.accessToken);
+    navigate(from, { replace: true });
   };
 
   const resetPassword = async () => {

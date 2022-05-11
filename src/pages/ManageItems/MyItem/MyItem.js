@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import useInventory from "../../../Hooks/useInventory";
 
 const MyItem = (props) => {
-  const { isHome } = props;
   const { _id, name, image, price, description, supplier, quantity } =
     props.myItem;
 
@@ -57,22 +56,17 @@ const MyItem = (props) => {
       <div className="flex justify-between">
         <button
           onClick={() => navigateInventoryUpdate(_id)}
-          className={
-            isHome
-              ? "w-full px-8 text-white bg-[#c70909] hover:bg-[#C70909]  py-2 font-bold"
-              : "w-full px-8 mr-1 text-white bg-[#c70909] hover:bg-[#C70909]  py-2 font-bold"
-          }
+          className="w-full px-8 mr-1 text-white bg-[#c70909] hover:bg-[#C70909]  py-2 font-bold"
         >
           Update
         </button>
-        {!isHome && (
-          <button
-            onClick={() => handelDeleteItem(inventory._id)}
-            className="w-full ml-1 px-8 text-white bg-[#c70909] hover:bg-[#C70909]  py-2 font-bold"
-          >
-            Delete
-          </button>
-        )}
+
+        <button
+          onClick={() => handelDeleteItem(inventory._id)}
+          className="w-full ml-1 px-8 text-white bg-[#c70909] hover:bg-[#C70909]  py-2 font-bold"
+        >
+          Delete
+        </button>
       </div>
     </div>
   );
