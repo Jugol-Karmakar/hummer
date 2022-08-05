@@ -2,9 +2,11 @@ import React from "react";
 import logoImage from "../../../images/logo.png";
 import {
   FaFacebook,
-  FaInstagramSquare,
+  FaLinkedinIn,
   FaTwitter,
   FaYoutube,
+  FaGooglePlusG,
+  FaPhoneAlt,
 } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import { MdLocationPin } from "react-icons/md";
@@ -14,58 +16,125 @@ const Footer = () => {
   const today = new Date();
   const year = today.getFullYear();
   return (
-    <div className="w-full bg-white">
-      <div className="container mx-auto lg:px-20 px-10 pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <div className="mx-6 flex flex-col">
-            <div className="flex items-center py-3">
-              <img className="h-6 mx-3" src={logoImage} alt="" />
-              <h1 className="text-3xl font-bold text-[#c70909]"> Hummer </h1>
-            </div>
-
-            <p className="text-sm text-neutral-500">
+    <div className=" bg-[#202127]">
+      <footer className="container mx-auto footer p-10 pt-20 flex flex-col lg:flex-row lg:justify-between">
+        <div className="flex flex-col max-w-xs mx-6">
+          <div className="flex items-center">
+            <img className="w-8 mr-2" src={logoImage} alt="" />
+            <h3 className="text-xl font-bold text-red-600">HUMMER</h3>
+          </div>
+          <div>
+            <p className="text-sm text-gray-300 py-3">
               Provide useful, constructive feedback. Talk about a range of
               elements, including customer service. Be detailed, specific, and
               honest. Leave out links and personal information. Keep it civil
               and friendly. Feel free to update your review if needed. Check
               you've got the right domain name or company.
             </p>
-          </div>
-          <div className="mx-6">
-            <h3 className="text-2xl font-bold py-3">Contact</h3>
-            <div className="">
-              <p className="text-base my-2 font-semibold flex  items-center">
-                {" "}
-                <MdLocationPin className="text-2xl mr-3 text-[#c70909]"></MdLocationPin>
-                23/4 Shibbari mor,Khulna
-              </p>
-              <p className="text-base my-2 font-semibold flex items-center">
-                {" "}
-                <GrMail className="text-xl mr-3  text-[#c70909]"></GrMail>
-                Email@gmail.com
-              </p>
-              <p className="text-base my-2 font-semibold flex items-center">
-                {" "}
-                <BsFillPhoneFill className="text-xl mr-3  text-[#c70909]"></BsFillPhoneFill>
-                34623454435
-              </p>
-            </div>
-
-            <div className="flex my-3 justify-start">
-              <FaFacebook className="text-2xl cursor-pointer text-blue-500 mx-2" />
-              <FaInstagramSquare className="text-2xl cursor-pointer text-black mx-2" />
-              <FaTwitter className=" text-2xl cursor-pointer text-cyan-500 mx-2" />
-              <FaYoutube className="text-2xl cursor-pointer text-red-600 mx-2" />
+            <div className="mt-3">
+              <div className="flex items-center mb-2">
+                <MdLocationPin className="text-xl text-red-600 mr-2" />
+                <span className="text-bold text-white">
+                  21 Revolution Street, Paris ,France.
+                </span>
+              </div>
+              <div className="flex items-center mb-2">
+                <FaPhoneAlt className="text-xl text-red-600 mr-2" />
+                <span className="text-bold text-white">+94792214</span>
+              </div>
+              <div className="flex items-center mb-2">
+                <GrMail className="text-xl text-red-600 mr-2" />
+                <span className="text-bold text-white">hummer@gmail.com</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        <div className="flex flex-col mx-6">
+          <span className="text-2xl font-bold text-white pb-4">Customers</span>
+          <a href="/" className="text-gray-300 hover:underline">
+            Buyer
+          </a>
+          <a href="/" className="text-gray-300 hover:underline">
+            Supplier
+          </a>
+        </div>
+        <div className="flex flex-col">
+          <span className="text-2xl font-bold text-white pb-4">Company</span>
+          <a href="/" className="text-gray-300 hover:underline">
+            Home
+          </a>
+          <a href="/" className="text-gray-300 hover:underline">
+            About Us
+          </a>
+          <a href="/" className="text-gray-300 hover:underline">
+            Contact Us
+          </a>
+          <a href="/" className="text-gray-300 hover:underline">
+            Our factories
+          </a>
+          <a href="/" className="text-gray-300 hover:underline">
+            Environment
+          </a>
+        </div>
 
-      <div className=" flex justify-center my-3">
-        <h2 className="text-black font-medium">
-          Copyright © {year}{" "}
-          <span className="text-[#c70909] font-bold">HUMMER</span>
-        </h2>
+        <div className="flex flex-col mx-6">
+          <span className="text-2xl font-bold text-white pb-4">Production</span>
+          <a href="/" className="text-gray-300 hover:underline">
+            Technology
+          </a>
+          <a href="/" className="text-gray-300 hover:underline">
+            Products
+          </a>
+          <a href="/" className="text-gray-300 hover:underline">
+            Quality
+          </a>
+          <a href="/" className="text-gray-300 hover:underline">
+            Sales geography
+          </a>
+          <a href="/" className="text-gray-300 hover:underline">
+            Our customers
+          </a>
+        </div>
+        <div className="flex flex-col">
+          <span className="text-2xl font-bold text-white pb-4">
+            Further Information
+          </span>
+          <a href="/" className="text-gray-300 hover:underline">
+            Terms & Conditions
+          </a>
+          <a href="/" className="text-gray-300 hover:underline">
+            Privacy Policy
+          </a>
+        </div>
+      </footer>
+      <hr className="mx-20 border-white" />
+      <div className="flex items-center justify-around py-6">
+        <div className="">
+          <h2 className="text-white font-medium">
+            Copyright © {year}{" "}
+            <span className="text-[#c70909] font-bold">HUMMER. </span>
+            All right Reserved.
+          </h2>
+        </div>
+        <div className="flex flex-row mx-6">
+          <div className="flex items-center">
+            <div className="flex items-center bg-[#0b3fcf] p-3 rounded-full mr-2 cursor-pointer">
+              <FaFacebook className="text-lg text-white" />
+            </div>
+            <div className="flex items-center bg-[#0780b8] p-3 rounded-full mr-2 cursor-pointer">
+              <FaLinkedinIn className="text-lg text-white" />
+            </div>
+            <div className="flex items-center bg-[#c70909] p-3 rounded-full mr-2 cursor-pointer">
+              <FaGooglePlusG className="text-lg text-white" />
+            </div>
+            <div className="flex items-center bg-[#3ca7ee] p-3 rounded-full mr-2 cursor-pointer">
+              <FaTwitter className="text-lg text-white" />
+            </div>
+            <div className="flex items-center bg-[#c70909] p-3 rounded-full mr-2 cursor-pointer">
+              <FaYoutube className="text-lg text-white" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
